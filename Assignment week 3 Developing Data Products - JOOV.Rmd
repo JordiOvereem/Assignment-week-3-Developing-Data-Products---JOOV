@@ -12,7 +12,7 @@ library("plotly")
 
 ## Diamonds data with Plotly
 ```{r echo= FALSE, message=FALSE}
-df <- diamonds[sample(1:nrow(diamonds), size = 5000),]
+df <- diamonds[sample(1:nrow(diamonds), size = 3000),]
  
 plot_ly(df, x = df$x, y = df$price, mode = "markers", color = df$cut, size = df$z) %>%
 layout(title = "Diamonds")
