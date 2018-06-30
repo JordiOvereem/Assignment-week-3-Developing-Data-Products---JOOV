@@ -1,0 +1,21 @@
+---
+title: "Assignment week 3 Developing Data Products - JOOV"
+author: "Jordi Overeem"
+date: "30 juni 2018"
+output: ioslides_presentation
+---
+
+```{r include=FALSE}
+library("ggplot2")
+library("plotly")
+```
+
+## Diamonds data with Plotly
+```{r echo= FALSE, message=FALSE}
+df <- diamonds[sample(1:nrow(diamonds), size = 3000),]
+ 
+plot_ly(df, x = df$x, y = df$price, mode = "markers", color = df$cut, size = df$z) %>%
+layout(title = "Diamonds")
+```
+
+## THANKS!
